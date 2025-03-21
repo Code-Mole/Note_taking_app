@@ -1,0 +1,101 @@
+/* Default Light Theme */
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #000;
+  --container-bg: white;
+  --note-bg: #fff3cd;
+  --note-border: #ffc107;
+  --button-bg: #28a745;
+  --button-hover: #218838;
+  --delete-bg: #dc3545;
+  --delete-hover: #c82333;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #fff;
+  --container-bg: #1e1e1e;
+  --note-bg: #333;
+  --note-border: #ffcc00;
+  --button-bg: #00aaff;
+  --button-hover: #0088cc;
+  --delete-bg: #ff4444;
+  --delete-hover: #cc0000;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+  background: var(--container-bg);
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.note {
+  background: var(--note-bg);
+  border-left: 5px solid var(--note-border);
+}
+#toggle-dark-mode {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  left: 15rem;
+  bottom: 3rem;
+  color: var(--text-color);
+}
+
+#save-note {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-bg);
+}
+
+#save-note:hover {
+  background-color: var(--button-hover);
+  border: var(--note-border) 5px solid;
+}
+
+.note button {
+  background-color: var(--delete-bg);
+}
+
+.note button:hover {
+  background-color: var(--delete-hover);
+}
+
+@media (max-width: 1200px) {
+  #toggle-dark-mode {
+    left: 12rem;
+  }
+}
+@media (max-width: 900px) {
+  #toggle-dark-mode {
+    left: 0px;
+    bottom: 0px;
+    margin: 5px;
+  }
+}
