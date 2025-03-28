@@ -51,7 +51,7 @@ function loadNotes() {
     noteItem.innerHTML = `
             <h3>${note.title}</h3>
             <p>${note.content}</p>
-            <button onclick="editNote(${index})">Edit</button>
+            <button id="edit" onclick="editNote(${index})">Edit</button>
             <button onclick="deleteNote(${index})">Delete</button>
         `;
 

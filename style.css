@@ -81,6 +81,14 @@ textarea {
 
 .note button {
   background-color: var(--delete-bg);
+  padding: 10px 40px;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  margin: 0 15px;
+}
+#edit {
+  background-color: var(--button-bg);
 }
 
 .note button:hover {
